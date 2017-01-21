@@ -16,6 +16,7 @@
 		CDB1F5B01E33FE4600421E9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1F5AF1E33FE4600421E9A /* Extensions.swift */; };
 		CDB1F5B21E33FF0000421E9A /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1F5B11E33FF0000421E9A /* EventTableViewController.swift */; };
 		CDB1F5B41E33FF8900421E9A /* NotificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1F5B31E33FF8900421E9A /* NotificationTypes.swift */; };
+		CDB1F5B61E3401B800421E9A /* APIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1F5B51E3401B800421E9A /* APIWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		CDB1F5AF1E33FE4600421E9A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CDB1F5B11E33FF0000421E9A /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		CDB1F5B31E33FF8900421E9A /* NotificationTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTypes.swift; sourceTree = "<group>"; };
+		CDB1F5B51E3401B800421E9A /* APIWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIWrapper.swift; sourceTree = "<group>"; };
 		F87F803A4D87ECBC344C939B /* Pods-osudovehry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osudovehry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-osudovehry/Pods-osudovehry.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 				CDB1F5AF1E33FE4600421E9A /* Extensions.swift */,
 				CDB1F5B11E33FF0000421E9A /* EventTableViewController.swift */,
 				CDB1F5B31E33FF8900421E9A /* NotificationTypes.swift */,
+				CDB1F5B51E3401B800421E9A /* APIWrapper.swift */,
 			);
 			path = osudovehry;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				CDB1F5AE1E33FDA100421E9A /* Event.swift in Sources */,
 				CD89FBE51E33FBBC00D5DFFB /* AppDelegate.swift in Sources */,
 				CDB1F5B01E33FE4600421E9A /* Extensions.swift in Sources */,
+				CDB1F5B61E3401B800421E9A /* APIWrapper.swift in Sources */,
 				CDB1F5B21E33FF0000421E9A /* EventTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
