@@ -12,6 +12,8 @@
 		CD89FBE71E33FBBC00D5DFFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD89FBE61E33FBBC00D5DFFB /* ViewController.swift */; };
 		CD89FBEC1E33FBBC00D5DFFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD89FBEB1E33FBBC00D5DFFB /* Assets.xcassets */; };
 		CD89FBEF1E33FBBC00D5DFFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD89FBED1E33FBBC00D5DFFB /* LaunchScreen.storyboard */; };
+		CDB1F5AE1E33FDA100421E9A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1F5AD1E33FDA100421E9A /* Event.swift */; };
+		CDB1F5B01E33FE4600421E9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1F5AF1E33FE4600421E9A /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		CD89FBEB1E33FBBC00D5DFFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD89FBEE1E33FBBC00D5DFFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD89FBF01E33FBBC00D5DFFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB1F5AD1E33FDA100421E9A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		CDB1F5AF1E33FE4600421E9A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F87F803A4D87ECBC344C939B /* Pods-osudovehry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osudovehry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-osudovehry/Pods-osudovehry.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +85,8 @@
 				CD89FBEB1E33FBBC00D5DFFB /* Assets.xcassets */,
 				CD89FBED1E33FBBC00D5DFFB /* LaunchScreen.storyboard */,
 				CD89FBF01E33FBBC00D5DFFB /* Info.plist */,
+				CDB1F5AD1E33FDA100421E9A /* Event.swift */,
+				CDB1F5AF1E33FE4600421E9A /* Extensions.swift */,
 			);
 			path = osudovehry;
 			sourceTree = "<group>";
@@ -208,7 +214,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD89FBE71E33FBBC00D5DFFB /* ViewController.swift in Sources */,
+				CDB1F5AE1E33FDA100421E9A /* Event.swift in Sources */,
 				CD89FBE51E33FBBC00D5DFFB /* AppDelegate.swift in Sources */,
+				CDB1F5B01E33FE4600421E9A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
