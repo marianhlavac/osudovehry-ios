@@ -14,6 +14,8 @@
 		CD89FBEF1E33FBBC00D5DFFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD89FBED1E33FBBC00D5DFFB /* LaunchScreen.storyboard */; };
 		CDB1F5AE1E33FDA100421E9A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1F5AD1E33FDA100421E9A /* Event.swift */; };
 		CDB1F5B01E33FE4600421E9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1F5AF1E33FE4600421E9A /* Extensions.swift */; };
+		CDB1F5B21E33FF0000421E9A /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1F5B11E33FF0000421E9A /* EventTableViewController.swift */; };
+		CDB1F5B41E33FF8900421E9A /* NotificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1F5B31E33FF8900421E9A /* NotificationTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		CD89FBF01E33FBBC00D5DFFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDB1F5AD1E33FDA100421E9A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		CDB1F5AF1E33FE4600421E9A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CDB1F5B11E33FF0000421E9A /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		CDB1F5B31E33FF8900421E9A /* NotificationTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTypes.swift; sourceTree = "<group>"; };
 		F87F803A4D87ECBC344C939B /* Pods-osudovehry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osudovehry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-osudovehry/Pods-osudovehry.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +91,8 @@
 				CD89FBF01E33FBBC00D5DFFB /* Info.plist */,
 				CDB1F5AD1E33FDA100421E9A /* Event.swift */,
 				CDB1F5AF1E33FE4600421E9A /* Extensions.swift */,
+				CDB1F5B11E33FF0000421E9A /* EventTableViewController.swift */,
+				CDB1F5B31E33FF8900421E9A /* NotificationTypes.swift */,
 			);
 			path = osudovehry;
 			sourceTree = "<group>";
@@ -213,10 +219,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB1F5B41E33FF8900421E9A /* NotificationTypes.swift in Sources */,
 				CD89FBE71E33FBBC00D5DFFB /* ViewController.swift in Sources */,
 				CDB1F5AE1E33FDA100421E9A /* Event.swift in Sources */,
 				CD89FBE51E33FBBC00D5DFFB /* AppDelegate.swift in Sources */,
 				CDB1F5B01E33FE4600421E9A /* Extensions.swift in Sources */,
+				CDB1F5B21E33FF0000421E9A /* EventTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
