@@ -86,16 +86,16 @@
 		CD89FBE31E33FBBC00D5DFFB /* osudovehry */ = {
 			isa = PBXGroup;
 			children = (
-				CD89FBE41E33FBBC00D5DFFB /* AppDelegate.swift */,
-				CD89FBE61E33FBBC00D5DFFB /* ViewController.swift */,
 				CD89FBEB1E33FBBC00D5DFFB /* Assets.xcassets */,
 				CD89FBED1E33FBBC00D5DFFB /* LaunchScreen.storyboard */,
 				CD89FBF01E33FBBC00D5DFFB /* Info.plist */,
+				CD89FBE41E33FBBC00D5DFFB /* AppDelegate.swift */,
+				CD89FBE61E33FBBC00D5DFFB /* ViewController.swift */,
+				CDB1F5B11E33FF0000421E9A /* EventTableViewController.swift */,
+				CDB1F5B51E3401B800421E9A /* APIWrapper.swift */,
 				CDB1F5AD1E33FDA100421E9A /* Event.swift */,
 				CDB1F5AF1E33FE4600421E9A /* Extensions.swift */,
-				CDB1F5B11E33FF0000421E9A /* EventTableViewController.swift */,
 				CDB1F5B31E33FF8900421E9A /* NotificationTypes.swift */,
-				CDB1F5B51E3401B800421E9A /* APIWrapper.swift */,
 			);
 			path = osudovehry;
 			sourceTree = "<group>";

@@ -12,8 +12,8 @@ import SwiftyJSON
 class Event: NSObject {
     let name: String
     let desc: String
-    let startsAt: String
-    let endsAt: String
+    let startsAt: Date
+    let endsAt: Date
     let price: Int
     let coverPhotoUrl: String
     let attendeeCount: Int
