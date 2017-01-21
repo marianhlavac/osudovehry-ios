@@ -41,4 +41,19 @@ class APIWrapper {
             }
         }
     }
+    
+    func getEvents() -> [Event] {
+        return events
+    }
+    
+    func getUpcomingEvents() -> [Event] {
+        return events.filter() {
+            switch $0.startsAt.compare(Date()) {
+            case .orderedDescending:
+                return true
+            default:
+                return false
+            }
+        }
+    }
 }

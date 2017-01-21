@@ -20,8 +20,8 @@ class EventTableViewController: UITableViewController {
     var events = [Event]()
     
     init(type: EventTableType) {
-        super.init(nibName: nil, bundle: nil)
         self.type = type
+        super.init(nibName: nil, bundle: nil)
         
         // Add data receiving observer
         NotificationCenter.default.addObserver(self, selector: #selector(self.update), name: NotificationTypes.dataChange, object: nil)
@@ -34,8 +34,9 @@ class EventTableViewController: UITableViewController {
     func update() {
         switch type {
         case .upcoming:
-            
+            events = APIWrapper.service.getUpcomingEvents()
         case .all:
+            events = APIWrapper.service.getEvents()
         }
         
         tableView.reloadData()
