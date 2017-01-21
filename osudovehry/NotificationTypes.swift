@@ -9,5 +9,7 @@
 import UIKit
 
 class NotificationTypes {
+    
     static let dataChange = NSNotification.Name(rawValue: "DATA_CHANGE")
+    
 }

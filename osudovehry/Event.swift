@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 
 class Event: NSObject {
+    
     let name: String
     let desc: String
     let startsAt: Date
