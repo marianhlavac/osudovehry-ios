@@ -10,7 +10,6 @@
 		8FA92F980509DFD67C40AC89 /* Pods_osudovehry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E29D6C9CC9AB80EA5839CBA /* Pods_osudovehry.framework */; };
 		CD89FBE51E33FBBC00D5DFFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD89FBE41E33FBBC00D5DFFB /* AppDelegate.swift */; };
 		CD89FBE71E33FBBC00D5DFFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD89FBE61E33FBBC00D5DFFB /* ViewController.swift */; };
-		CD89FBEA1E33FBBC00D5DFFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD89FBE81E33FBBC00D5DFFB /* Main.storyboard */; };
 		CD89FBEC1E33FBBC00D5DFFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD89FBEB1E33FBBC00D5DFFB /* Assets.xcassets */; };
 		CD89FBEF1E33FBBC00D5DFFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD89FBED1E33FBBC00D5DFFB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -21,7 +20,6 @@
 		CD89FBE11E33FBBC00D5DFFB /* osudovehry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = osudovehry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD89FBE41E33FBBC00D5DFFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD89FBE61E33FBBC00D5DFFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CD89FBE91E33FBBC00D5DFFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD89FBEB1E33FBBC00D5DFFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD89FBEE1E33FBBC00D5DFFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD89FBF01E33FBBC00D5DFFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			children = (
 				CD89FBE41E33FBBC00D5DFFB /* AppDelegate.swift */,
 				CD89FBE61E33FBBC00D5DFFB /* ViewController.swift */,
-				CD89FBE81E33FBBC00D5DFFB /* Main.storyboard */,
 				CD89FBEB1E33FBBC00D5DFFB /* Assets.xcassets */,
 				CD89FBED1E33FBBC00D5DFFB /* LaunchScreen.storyboard */,
 				CD89FBF01E33FBBC00D5DFFB /* Info.plist */,
@@ -152,7 +149,6 @@
 			files = (
 				CD89FBEF1E33FBBC00D5DFFB /* LaunchScreen.storyboard in Resources */,
 				CD89FBEC1E33FBBC00D5DFFB /* Assets.xcassets in Resources */,
-				CD89FBEA1E33FBBC00D5DFFB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,14 +215,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CD89FBE81E33FBBC00D5DFFB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CD89FBE91E33FBBC00D5DFFB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CD89FBED1E33FBBC00D5DFFB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -376,6 +364,7 @@
 				CD89FBF51E33FBBC00D5DFFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
