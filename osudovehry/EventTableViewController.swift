@@ -25,6 +25,9 @@ class EventTableViewController: UITableViewController {
         
         // Add data receiving observer
         NotificationCenter.default.addObserver(self, selector: #selector(self.update), name: NotificationTypes.dataChange, object: nil)
+        
+        // Create tabBarItem
+        tabBarItem = UITabBarItem(title: type == .all ? "All" : "Upcoming", image: nil, selectedImage: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -42,15 +45,21 @@ class EventTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "reuseIdentifier")
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         // Set navigation title, depending on table type
         switch type {
         case .upcoming:
-            tabBarController?.navigationItem.title = "All Events"
-        case .all:
             tabBarController?.navigationItem.title = "Upcoming Events"
+        case .all:
+            tabBarController?.navigationItem.title = "All Events"
         }
         
         // Set this class as data source

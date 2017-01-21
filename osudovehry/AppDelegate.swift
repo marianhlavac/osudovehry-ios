@@ -15,7 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let tabBar = UITabBarController()
+        
+        // Tabs
+        let upcomingEventsViewController = EventTableViewController(type: .upcoming)
+        let allEventsViewController = EventTableViewController(type: .all)
+        let resultsViewController = ResultsTableViewController()
+        let settingsViewController = SettingsTableViewController()
+        
+        tabBar.viewControllers = [ upcomingEventsViewController, allEventsViewController, resultsViewController, settingsViewController ]
+        
+        // Fetch data on load
+        APIWrapper.service.fetchData()
+        
+        window.rootViewController = UINavigationController(rootViewController: tabBar)
+        window.makeKeyAndVisible()
+        self.window = window
         return true
     }
 

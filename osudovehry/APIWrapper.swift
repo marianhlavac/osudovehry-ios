@@ -9,12 +9,12 @@
 import Alamofire
 import SwiftyJSON
 
+enum APIWrapperResult {
+    case success(JSON)
+    case failure(Error)
+}
+
 class APIWrapper {
-    
-    enum Result {
-        case success(JSON)
-        case failure(Error)
-    }
     
     // This is singleton
     private init() { }
@@ -22,7 +22,7 @@ class APIWrapper {
     
     var events : [Event] = []
     
-    func fetchData(completion: @escaping (Result) -> Void) {
+    func fetchData() {
         Alamofire.request("http://private-1f7cd-osudovehry.apiary-mock.com/events").responseJSON { response in
             switch response.result {
             case .success(let value):
@@ -34,10 +34,9 @@ class APIWrapper {
                 }
                 
                 NotificationCenter.default.post(name: NotificationTypes.dataChange, object: nil)
-                
-                completion(.success(json))
             case .failure(let error):
-                completion(.failure(error))
+                print(error)
+                // TODO: do something, ffs
             }
         }
     }

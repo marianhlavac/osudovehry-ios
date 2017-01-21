@@ -19,6 +19,7 @@
 		CDB1F5B61E3401B800421E9A /* APIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1F5B51E3401B800421E9A /* APIWrapper.swift */; };
 		CDB1F5B81E34060000421E9A /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1F5B71E34060000421E9A /* ResultsTableViewController.swift */; };
 		CDB1F5BA1E34060700421E9A /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1F5B91E34060700421E9A /* SettingsTableViewController.swift */; };
+		CDCDE0151E340BC000234D58 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCDE0141E340BC000234D58 /* EventTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		CDB1F5B51E3401B800421E9A /* APIWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIWrapper.swift; sourceTree = "<group>"; };
 		CDB1F5B71E34060000421E9A /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		CDB1F5B91E34060700421E9A /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		CDCDE0141E340BC000234D58 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		F87F803A4D87ECBC344C939B /* Pods-osudovehry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osudovehry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-osudovehry/Pods-osudovehry.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 				CD89FBE41E33FBBC00D5DFFB /* AppDelegate.swift */,
 				CD89FBE61E33FBBC00D5DFFB /* ViewController.swift */,
 				CDB1F5B11E33FF0000421E9A /* EventTableViewController.swift */,
+				CDCDE0141E340BC000234D58 /* EventTableViewCell.swift */,
 				CDB1F5B71E34060000421E9A /* ResultsTableViewController.swift */,
 				CDB1F5B91E34060700421E9A /* SettingsTableViewController.swift */,
 				CDB1F5B51E3401B800421E9A /* APIWrapper.swift */,
@@ -236,6 +239,7 @@
 				CDB1F5B01E33FE4600421E9A /* Extensions.swift in Sources */,
 				CDB1F5B61E3401B800421E9A /* APIWrapper.swift in Sources */,
 				CDB1F5B21E33FF0000421E9A /* EventTableViewController.swift in Sources */,
+				CDCDE0151E340BC000234D58 /* EventTableViewCell.swift in Sources */,
 				CDB1F5BA1E34060700421E9A /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
