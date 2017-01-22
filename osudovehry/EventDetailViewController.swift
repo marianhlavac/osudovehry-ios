@@ -49,7 +49,7 @@ class EventDetailViewController: UIViewController {
         let hairlineView = HairlineView()
         
         let eventDescLabel = UILabel()
-        eventDescLabel.text = event.desc + event.desc + event.desc
+        eventDescLabel.text = event.desc
         eventDescLabel.lineBreakMode = .byWordWrapping
         eventDescLabel.numberOfLines = 0
         
@@ -59,7 +59,18 @@ class EventDetailViewController: UIViewController {
         let eventAttendeeLabel = UILabel()
         eventAttendeeLabel.text = String(event.attendeeCount) + " attendees"
         
-        stackView = UIStackView(arrangedSubviews: [ coverPhotoImageView, eventNameLabel, eventDateLabel, hairlineView, eventDescLabel ])
+        let moreInfoButton = UIButton(type: .roundedRect)
+        moreInfoButton.setTitle("More info", for: .normal)
+        moreInfoButton.addTarget(self, action: #selector(EventDetailViewController.openInfo), for: .touchUpInside)
+        
+        if (event.url == "") {
+            moreInfoButton.isHidden = true
+        }
+        
+        stackView = UIStackView(arrangedSubviews: [
+            coverPhotoImageView, eventNameLabel, eventDateLabel, hairlineView, eventDescLabel,
+            hairlineView, eventPriceLabel, eventAttendeeLabel, moreInfoButton
+            ])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         
@@ -108,6 +119,10 @@ class EventDetailViewController: UIViewController {
         super.viewDidLayoutSubviews()
         scrollView.contentSize = CGSize(width: stackView.frame.width, height: stackView.frame.height)
         scrollView.contentSize.width = scrollView.frame.size.width
+    }
+    
+    func openInfo() {
+        UIApplication.shared.open(URL(string: event.url)!)
     }
     
 
