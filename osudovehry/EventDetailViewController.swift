@@ -107,7 +107,12 @@ class EventDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.action, target: self, action: Selector("share"))
+        let shareButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.action, target: self, action: #selector(EventDetailViewController.share))
+        navigationItem.rightBarButtonItem = shareButton
+        
+        if (event.url == "") {
+            shareButton.isEnabled = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -123,6 +128,11 @@ class EventDetailViewController: UIViewController {
     
     func openInfo() {
         UIApplication.shared.open(URL(string: event.url)!)
+    }
+    
+    func share() {
+        let vc = UIActivityViewController(activityItems: [URL(string: event.url)!], applicationActivities: [])
+        present(vc, animated: true)
     }
     
 
