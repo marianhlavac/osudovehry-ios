@@ -81,7 +81,6 @@ class EventTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
@@ -89,5 +88,13 @@ class EventTableViewController: UITableViewController {
         cell.textLabel?.text = events[indexPath.row].name
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You selected cell number: \(indexPath.row)!")
+        
+        let event = events[indexPath.row]
+        
+        navigationController?.pushViewController(EventDetailViewController(event: event), animated: true)
     }
 }
