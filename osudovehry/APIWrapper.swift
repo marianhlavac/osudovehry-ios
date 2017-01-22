@@ -69,4 +69,10 @@ class APIWrapper {
             }
         }
     }
+    
+    func getEventsWithResults() -> [Event] {
+        return getSortedEvents().filter() {
+            return $0.results.count > 0
+        }
+    }
 }
