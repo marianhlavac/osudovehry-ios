@@ -66,8 +66,6 @@ class SettingsTableViewController: UITableViewController {
             cell.accessoryView = notificationsSwitch
         case 1:
             cell.textLabel?.text = "Send example notification"
-        case 2:
-            cell.textLabel?.text = "Cancel all notifications"
         default:
             cell.textLabel?.text = ""
         }
@@ -79,8 +77,6 @@ class SettingsTableViewController: UITableViewController {
         switch (indexPath.row) {
         case 1:
             sendExampleNotification()
-        case 2:
-            SettingsTableViewController.cancelAllNotifications()
         default:
             break
         }
@@ -132,6 +128,7 @@ class SettingsTableViewController: UITableViewController {
     static func setupNotifications() {
         if (UserDefaults.standard.bool(forKey: "notifications")) {
             let center = UNUserNotificationCenter.current()
+            SettingsTableViewController.cancelAllNotifications()
             
             let events = APIWrapper.service.getUpcomingEvents()
             
