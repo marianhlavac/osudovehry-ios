@@ -51,12 +51,16 @@ class APIWrapper {
         }
     }
     
+    func getSortedEvents() -> [Event] {
+        return events.sorted(by: { $0.startsAt.compare($1.startsAt) == ComparisonResult.orderedDescending })
+    }
+    
     func getEvents() -> [Event] {
-        return events
+        return getSortedEvents()
     }
     
     func getUpcomingEvents() -> [Event] {
-        return events.filter() {
+        return getSortedEvents().filter() {
             switch $0.startsAt.compare(Date()) {
             case .orderedDescending:
                 return true
