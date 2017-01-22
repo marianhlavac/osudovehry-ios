@@ -18,6 +18,8 @@ class Event: NSObject {
     let price: Int
     let coverPhoto: UIImage
     let attendeeCount: Int
+    let url: String
+    let results: [String]
     
     init(json: JSON, coverPhoto: UIImage) {
         name = json["name"].stringValue
@@ -27,5 +29,16 @@ class Event: NSObject {
         price = json["price"].intValue
         self.coverPhoto = coverPhoto
         attendeeCount = json["attendee-count"].intValue
+        url = json["url"].exists() ? json["url"].stringValue : ""
+        
+        if (json["results"].exists()) {
+            results = [
+                json["results"]["first"].stringValue,
+                json["results"]["second"].stringValue,
+                json["results"]["third"].stringValue
+            ]
+        } else {
+            results = [ ]
+        }
     }
 }
