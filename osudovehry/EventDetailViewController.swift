@@ -44,7 +44,11 @@ class EventDetailViewController: UIViewController {
         let fmt = DateFormatter()
         fmt.dateStyle = .medium
         fmt.timeStyle = .short
-        eventDateLabel.text = fmt.string(from: event.startsAt) + "-" + fmt.string(from: event.endsAt)
+        eventDateLabel.text = fmt.string(from: event.startsAt) + " ― "
+        let startDay = Calendar.current.dateComponents([.day], from: event.startsAt)
+        let endDay = Calendar.current.dateComponents([.day], from: event.endsAt)
+        fmt.dateStyle = startDay.day == endDay.day ? .none : .medium
+        eventDateLabel.text = eventDateLabel.text! + fmt.string(from: event.endsAt)
         
         let hairlineView = HairlineView()
         
