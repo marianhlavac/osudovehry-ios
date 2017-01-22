@@ -29,11 +29,21 @@ class APIWrapper {
                 let json = JSON(value)
                 
                 self.events.removeAll()
+                
+                let group = DispatchGroup()
+                
                 for event in json.arrayValue {
-                    self.events.append(Event(json: event))
+                    group.enter()
+                    Alamofire.request(event["cover-photo"].stringValue).response { response in
+                        let coverPhoto = UIImage(data: response.data!, scale:1)
+                        self.events.append(Event(json: event, coverPhoto: coverPhoto!))
+                        group.leave()
+                    }
                 }
                 
-                NotificationCenter.default.post(name: NotificationTypes.dataChange, object: nil)
+                group.notify(queue: .main) {
+                    NotificationCenter.default.post(name: NotificationTypes.dataChange, object: nil)
+                }
             case .failure(let error):
                 print(error)
                 // TODO: do something, ffs

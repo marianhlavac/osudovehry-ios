@@ -16,16 +16,16 @@ class Event: NSObject {
     let startsAt: Date
     let endsAt: Date
     let price: Int
-    let coverPhotoUrl: String
+    let coverPhoto: UIImage
     let attendeeCount: Int
     
-    init(json: JSON) {
+    init(json: JSON, coverPhoto: UIImage) {
         name = json["name"].stringValue
         desc = json["description"].stringValue
         startsAt = json["starts-at"].dateValue!
         endsAt = json["ends-at"].dateValue!
         price = json["price"].intValue
-        coverPhotoUrl = json["cover-photo-url"].stringValue
+        self.coverPhoto = coverPhoto
         attendeeCount = json["attendee-count"].intValue
     }
 }
