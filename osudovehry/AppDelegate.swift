@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,9 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Fetch data on load
         APIWrapper.service.fetchData()
         
+        // Register notifications
+        SettingsTableViewController.setupNotifications()
+        
         window.rootViewController = UINavigationController(rootViewController: tabBar)
         window.makeKeyAndVisible()
         self.window = window
+        
         return true
     }
 
