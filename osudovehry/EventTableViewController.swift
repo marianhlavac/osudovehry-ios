@@ -91,8 +91,6 @@ class EventTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You selected cell number: \(indexPath.row)!")
-        
         let event = events[indexPath.row]
         
         navigationController?.pushViewController(EventDetailViewController(event: event), animated: true)
