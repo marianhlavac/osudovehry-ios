@@ -129,7 +129,7 @@ class SettingsTableViewController: UITableViewController {
         if (UserDefaults.standard.bool(forKey: "notifications")) {
             let center = UNUserNotificationCenter.current()
             
-            center.requestAuthorization(options: [.badge]) { result in }
+            center.requestAuthorization(options: [.badge, .alert, .sound]) { result in }
             
             SettingsTableViewController.cancelAllNotifications()
             
