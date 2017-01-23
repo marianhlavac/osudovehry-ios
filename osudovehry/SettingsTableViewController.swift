@@ -87,7 +87,7 @@ class SettingsTableViewController: UITableViewController {
         
         UNUserNotificationCenter.current().getNotificationSettings(){ (setttings) in
             
-            switch setttings.soundSetting{
+            switch setttings.badgeSetting {
             case .disabled:
                 let alert = UIAlertController(title: "Notifications are disabled", message: "Allow notifications in Settings to receive upcoming event notifications", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
@@ -128,6 +128,9 @@ class SettingsTableViewController: UITableViewController {
     static func setupNotifications() {
         if (UserDefaults.standard.bool(forKey: "notifications")) {
             let center = UNUserNotificationCenter.current()
+            
+            center.requestAuthorization(options: [.badge]) { result in }
+            
             SettingsTableViewController.cancelAllNotifications()
             
             let events = APIWrapper.service.getUpcomingEvents()
