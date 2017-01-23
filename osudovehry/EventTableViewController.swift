@@ -18,10 +18,16 @@ class EventTableViewController: UITableViewController {
     
     let type: EventTableType
     var events = [Event]()
+    let activityIndicator: UIActivityIndicatorView
     
     init(type: EventTableType) {
         self.type = type
+        
+        // Add loading indicator
+        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        
         super.init(nibName: nil, bundle: nil)
+        activityIndicator.isHidden = true
         
         // Add data receiving observer
         NotificationCenter.default.addObserver(self, selector: #selector(self.update), name: NotificationTypes.dataChange, object: nil)
@@ -34,7 +40,16 @@ class EventTableViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func displayActivityIndicator(center: CGPoint) {
+        activityIndicator.isHidden = false
+        activityIndicator.center = center
+        activityIndicator.startAnimating()
+    }
+    
     func update() {
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
+        
         switch type {
         case .upcoming:
             events = APIWrapper.service.getUpcomingEvents()
@@ -47,6 +62,8 @@ class EventTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.addSubview(activityIndicator)
         
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "reuseIdentifier")
     }
