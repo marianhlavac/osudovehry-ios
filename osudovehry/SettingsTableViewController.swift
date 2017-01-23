@@ -128,6 +128,10 @@ class SettingsTableViewController: UITableViewController {
         UserDefaults.standard.setValue(false, forKey: "notifications")
         UserDefaults.standard.setValue(false, forKey: "firstRun")
         UserDefaults.standard.synchronize()
+        
+        let alert = UIAlertController(title: "Clear user data", message: "User data cleared!", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func changeNotificationSettings() {
