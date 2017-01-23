@@ -17,7 +17,7 @@ class SettingsTableViewController: UITableViewController {
         super.init(nibName: nil, bundle: nil)
         
         // Create tabBarItem
-        tabBarItem = UITabBarItem(title: "Settings".localized, image: nil, selectedImage: nil)
+        tabBarItem = UITabBarItem(title: "Settings".localized, image: #imageLiteral(resourceName: "settingsIcon"), selectedImage: nil)
         
         notificationsSwitch.addTarget(self, action: #selector(SettingsTableViewController.changeNotificationSettings), for: .valueChanged)
     }

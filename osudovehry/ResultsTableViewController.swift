@@ -23,7 +23,7 @@ class ResultsTableViewController: UITableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.update), name: NotificationTypes.dataChange, object: nil)
         
         // Create tabBarItem
-        tabBarItem = UITabBarItem(title: "Results".localized, image: nil, selectedImage: nil)
+        tabBarItem = UITabBarItem(title: "Results".localized, image: #imageLiteral(resourceName: "resultsIcon"), selectedImage: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
