@@ -66,6 +66,8 @@ class SettingsTableViewController: UITableViewController {
             cell.accessoryView = notificationsSwitch
         case 1:
             cell.textLabel?.text = "Send Example".localized
+        case 2:
+            cell.textLabel?.text = "Delete user data".localized
         default:
             cell.textLabel?.text = ""
         }
@@ -77,6 +79,8 @@ class SettingsTableViewController: UITableViewController {
         switch (indexPath.row) {
         case 1:
             sendExampleNotification()
+        case 2:
+            clearUserData()
         default:
             break
         }
@@ -116,6 +120,14 @@ class SettingsTableViewController: UITableViewController {
         let center = UNUserNotificationCenter.current()
         
         center.removeAllPendingNotificationRequests()
+    }
+    
+    func clearUserData() {
+        SettingsTableViewController.cancelAllNotifications()
+        
+        UserDefaults.standard.setValue(false, forKey: "notifications")
+        UserDefaults.standard.setValue(false, forKey: "firstRun")
+        UserDefaults.standard.synchronize()
     }
     
     func changeNotificationSettings() {
