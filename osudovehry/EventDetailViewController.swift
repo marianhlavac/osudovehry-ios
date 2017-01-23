@@ -11,7 +11,6 @@ import UIKit
 class EventDetailViewController: UIViewController {
     
     var scrollView: UIScrollView!
-    var stackView: UIStackView!
     
     let event: Event
     
@@ -39,6 +38,7 @@ class EventDetailViewController: UIViewController {
 
         let eventNameLabel = UILabel()
         eventNameLabel.text = event.name
+        eventNameLabel.font = UIFont.boldSystemFont(ofSize: 16)
         
         let eventDateLabel = UILabel()
         let fmt = DateFormatter()
@@ -71,22 +71,24 @@ class EventDetailViewController: UIViewController {
             moreInfoButton.isHidden = true
         }
         
-        stackView = UIStackView(arrangedSubviews: [
+        _ = [
             coverPhotoImageView, eventNameLabel, eventDateLabel, hairlineView, eventDescLabel,
             hairlineView, eventPriceLabel, eventAttendeeLabel, moreInfoButton
-            ])
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        
-        scrollView.addSubview(stackView)
+            ].map() {
+                $0.translatesAutoresizingMaskIntoConstraints = false
+                scrollView.addSubview($0)
+        }
         
         let viewDict = [
             "super": view,
             "scroll": scrollView,
-            "stack": stackView,
             "cover": coverPhotoImageView,
             "name": eventNameLabel,
-            "date": eventDateLabel
+            "date": eventDateLabel,
+            "desc": eventDescLabel,
+            "price": eventPriceLabel,
+            "attendees": eventAttendeeLabel,
+            "moreinfo": moreInfoButton
         ]
         
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[scroll(==super)]|",
@@ -94,18 +96,28 @@ class EventDetailViewController: UIViewController {
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[scroll]|",
                                                            options: .alignAllCenterX, metrics: nil, views: viewDict))
         
-        scrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[stack(==scroll)]|",
-                                                                 options: .alignAllCenterX, metrics: nil, views: viewDict))
-        scrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[stack]|",
+        scrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:
+            "V:|[cover(==200)]-10-[name]-[date]-20-[desc]-20-[price]-[attendees]-20-[moreinfo]|",
+                                                                 options: [], metrics: nil, views: viewDict))
+        
+        scrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[cover(==scroll)]|",
+                                                                 options: [], metrics: nil, views: viewDict))
+        
+        scrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[name]-|",
+                                                                 options: [], metrics: nil, views: viewDict))
+        
+        scrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[date]-|",
+                                                                 options: [], metrics: nil, views: viewDict))
+        
+        scrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[desc]-|",
+                                                                 options: [], metrics: nil, views: viewDict))
+        
+        scrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[price(==attendees)]-[attendees]-|",
+                                                                 options: [], metrics: nil, views: viewDict))
+        
+        scrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[moreinfo]-|",
                                                                  options: .alignAllCenterX, metrics: nil, views: viewDict))
         
-        stackView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[cover(==200)]",
-                                                                options: [], metrics: nil, views: viewDict))
-        
-
-    
-        stackView.setNeedsUpdateConstraints()
-        view.setNeedsUpdateConstraints()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -126,8 +138,6 @@ class EventDetailViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        scrollView.contentSize = CGSize(width: stackView.frame.width, height: stackView.frame.height)
-        scrollView.contentSize.width = scrollView.frame.size.width
     }
     
     func openInfo() {

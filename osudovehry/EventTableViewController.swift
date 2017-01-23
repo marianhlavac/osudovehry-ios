@@ -29,6 +29,8 @@ class EventTableViewController: UITableViewController {
         super.init(nibName: nil, bundle: nil)
         activityIndicator.isHidden = true
         
+        self.tableView.contentInset = UIEdgeInsetsMake(0,0,44,0);
+        
         // Add data receiving observer
         NotificationCenter.default.addObserver(self, selector: #selector(self.update), name: NotificationTypes.dataChange, object: nil)
         
@@ -68,7 +70,7 @@ class EventTableViewController: UITableViewController {
         
         view.addSubview(activityIndicator)
         
-        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "reuseIdentifier")
+        tableView.register(EventTableViewCell.classForCoder(), forCellReuseIdentifier: "reuseIdentifier")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -102,10 +104,10 @@ class EventTableViewController: UITableViewController {
         return events.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> EventTableViewCell {
+        let cell = EventTableViewCell(events[indexPath.row])
 
-        cell.textLabel?.text = events[indexPath.row].name
+        
 
         return cell
     }
@@ -114,5 +116,9 @@ class EventTableViewController: UITableViewController {
         let event = events[indexPath.row]
         
         navigationController?.pushViewController(EventDetailViewController(event: event), animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
     }
 }
