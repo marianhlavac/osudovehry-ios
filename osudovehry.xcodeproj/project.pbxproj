@@ -23,6 +23,8 @@
 		CDCDE0191E3412FE00234D58 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCDE0181E3412FE00234D58 /* EventDetailViewController.swift */; };
 		CDF13A6B1E357AA7007F9DCC /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDF13A6D1E357AA7007F9DCC /* Localizable.plist */; };
 		CDF13A711E357B98007F9DCC /* Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF13A701E357B98007F9DCC /* Localizator.swift */; };
+		CDF13A731E358522007F9DCC /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF13A721E358522007F9DCC /* IntroViewController.swift */; };
+		CDF13A771E35861E007F9DCC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF13A761E35861E007F9DCC /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		CDF13A6C1E357AA7007F9DCC /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = cs; path = cs.lproj/Localizable.plist; sourceTree = "<group>"; };
 		CDF13A6E1E357AAD007F9DCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Localizable.plist; sourceTree = "<group>"; };
 		CDF13A701E357B98007F9DCC /* Localizator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizator.swift; sourceTree = "<group>"; };
+		CDF13A721E358522007F9DCC /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		CDF13A761E35861E007F9DCC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F87F803A4D87ECBC344C939B /* Pods-osudovehry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osudovehry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-osudovehry/Pods-osudovehry.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +106,7 @@
 			children = (
 				CDF13A601E357895007F9DCC /* Resources */,
 				CD89FBEB1E33FBBC00D5DFFB /* Assets.xcassets */,
+				CDF13A761E35861E007F9DCC /* Images.xcassets */,
 				CD89FBED1E33FBBC00D5DFFB /* LaunchScreen.storyboard */,
 				CD89FBF01E33FBBC00D5DFFB /* Info.plist */,
 				CD89FBE41E33FBBC00D5DFFB /* AppDelegate.swift */,
@@ -111,6 +116,7 @@
 				CDCDE0181E3412FE00234D58 /* EventDetailViewController.swift */,
 				CDB1F5B71E34060000421E9A /* ResultsTableViewController.swift */,
 				CDB1F5B91E34060700421E9A /* SettingsTableViewController.swift */,
+				CDF13A721E358522007F9DCC /* IntroViewController.swift */,
 				CDB1F5B51E3401B800421E9A /* APIWrapper.swift */,
 				CDB1F5AD1E33FDA100421E9A /* Event.swift */,
 				CDB1F5AF1E33FE4600421E9A /* Extensions.swift */,
@@ -192,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD89FBEF1E33FBBC00D5DFFB /* LaunchScreen.storyboard in Resources */,
+				CDF13A771E35861E007F9DCC /* Images.xcassets in Resources */,
 				CDF13A6B1E357AA7007F9DCC /* Localizable.plist in Resources */,
 				CD89FBEC1E33FBBC00D5DFFB /* Assets.xcassets in Resources */,
 			);
@@ -253,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDB1F5B81E34060000421E9A /* ResultsTableViewController.swift in Sources */,
+				CDF13A731E358522007F9DCC /* IntroViewController.swift in Sources */,
 				CDB1F5B41E33FF8900421E9A /* NotificationTypes.swift in Sources */,
 				CD89FBE71E33FBBC00D5DFFB /* ViewController.swift in Sources */,
 				CDB1F5AE1E33FDA100421E9A /* Event.swift in Sources */,

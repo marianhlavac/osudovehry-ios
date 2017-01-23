@@ -13,7 +13,7 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var tabBar: UITabBarController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
@@ -29,15 +29,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Fetch data on load
         APIWrapper.service.fetchData()
+        upcomingEventsViewController.displayActivityIndicator(center: window.center)
+        allEventsViewController.displayActivityIndicator(center: window.center)
         
         // Register notifications
         SettingsTableViewController.setupNotifications()
         
         window.rootViewController = UINavigationController(rootViewController: tabBar)
         window.makeKeyAndVisible()
+        
         self.window = window
+        self.tabBar = tabBar
+        
+        if (UserDefaults.standard.bool(forKey: "firstRun")) {
+            let introViewController = IntroViewController(introCallback: switchRootViewControllerToDefault)
+            window.rootViewController = introViewController
+            UserDefaults.standard.setValue(true, forKey: "firstRun")
+        }
         
         return true
+    }
+    
+    func switchRootViewControllerToDefault() {
+        window?.rootViewController = UINavigationController(rootViewController: tabBar!)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
