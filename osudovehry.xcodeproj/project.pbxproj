@@ -21,6 +21,8 @@
 		CDB1F5BA1E34060700421E9A /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1F5B91E34060700421E9A /* SettingsTableViewController.swift */; };
 		CDCDE0151E340BC000234D58 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCDE0141E340BC000234D58 /* EventTableViewCell.swift */; };
 		CDCDE0191E3412FE00234D58 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCDE0181E3412FE00234D58 /* EventDetailViewController.swift */; };
+		CDF13A6B1E357AA7007F9DCC /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDF13A6D1E357AA7007F9DCC /* Localizable.plist */; };
+		CDF13A711E357B98007F9DCC /* Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF13A701E357B98007F9DCC /* Localizator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		CDB1F5B91E34060700421E9A /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		CDCDE0141E340BC000234D58 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		CDCDE0181E3412FE00234D58 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		CDF13A6A1E357AA0007F9DCC /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CDF13A6C1E357AA7007F9DCC /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = cs; path = cs.lproj/Localizable.plist; sourceTree = "<group>"; };
+		CDF13A6E1E357AAD007F9DCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Localizable.plist; sourceTree = "<group>"; };
+		CDF13A701E357B98007F9DCC /* Localizator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizator.swift; sourceTree = "<group>"; };
 		F87F803A4D87ECBC344C939B /* Pods-osudovehry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osudovehry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-osudovehry/Pods-osudovehry.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +100,7 @@
 		CD89FBE31E33FBBC00D5DFFB /* osudovehry */ = {
 			isa = PBXGroup;
 			children = (
+				CDF13A601E357895007F9DCC /* Resources */,
 				CD89FBEB1E33FBBC00D5DFFB /* Assets.xcassets */,
 				CD89FBED1E33FBBC00D5DFFB /* LaunchScreen.storyboard */,
 				CD89FBF01E33FBBC00D5DFFB /* Info.plist */,
@@ -108,8 +115,17 @@
 				CDB1F5AD1E33FDA100421E9A /* Event.swift */,
 				CDB1F5AF1E33FE4600421E9A /* Extensions.swift */,
 				CDB1F5B31E33FF8900421E9A /* NotificationTypes.swift */,
+				CDF13A701E357B98007F9DCC /* Localizator.swift */,
 			);
 			path = osudovehry;
+			sourceTree = "<group>";
+		};
+		CDF13A601E357895007F9DCC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDF13A6D1E357AA7007F9DCC /* Localizable.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD89FBEF1E33FBBC00D5DFFB /* LaunchScreen.storyboard in Resources */,
+				CDF13A6B1E357AA7007F9DCC /* Localizable.plist in Resources */,
 				CD89FBEC1E33FBBC00D5DFFB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +260,7 @@
 				CDB1F5B01E33FE4600421E9A /* Extensions.swift in Sources */,
 				CDB1F5B61E3401B800421E9A /* APIWrapper.swift in Sources */,
 				CDB1F5B21E33FF0000421E9A /* EventTableViewController.swift in Sources */,
+				CDF13A711E357B98007F9DCC /* Localizator.swift in Sources */,
 				CDCDE0151E340BC000234D58 /* EventTableViewCell.swift in Sources */,
 				CDCDE0191E3412FE00234D58 /* EventDetailViewController.swift in Sources */,
 				CDB1F5BA1E34060700421E9A /* SettingsTableViewController.swift in Sources */,
@@ -256,8 +274,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				CD89FBEE1E33FBBC00D5DFFB /* Base */,
+				CDF13A6A1E357AA0007F9DCC /* cs */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CDF13A6D1E357AA7007F9DCC /* Localizable.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDF13A6C1E357AA7007F9DCC /* cs */,
+				CDF13A6E1E357AAD007F9DCC /* Base */,
+			);
+			name = Localizable.plist;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -267,6 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -317,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

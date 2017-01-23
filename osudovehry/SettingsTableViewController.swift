@@ -17,7 +17,7 @@ class SettingsTableViewController: UITableViewController {
         super.init(nibName: nil, bundle: nil)
         
         // Create tabBarItem
-        tabBarItem = UITabBarItem(title: "Settings", image: nil, selectedImage: nil)
+        tabBarItem = UITabBarItem(title: "Settings".localized, image: nil, selectedImage: nil)
         
         notificationsSwitch.addTarget(self, action: #selector(SettingsTableViewController.changeNotificationSettings), for: .valueChanged)
     }
@@ -38,7 +38,7 @@ class SettingsTableViewController: UITableViewController {
         super.viewDidAppear(animated)
         
         // Set navigation title
-        tabBarController?.navigationItem.title = "Settings"
+        tabBarController?.navigationItem.title = "Settings".localized
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,10 +62,10 @@ class SettingsTableViewController: UITableViewController {
 
         switch (indexPath.row) {
         case 0:
-            cell.textLabel?.text = "Allow upcoming event notifications"
+            cell.textLabel?.text = "Upcoming Ev Notifications".localized
             cell.accessoryView = notificationsSwitch
         case 1:
-            cell.textLabel?.text = "Send example notification"
+            cell.textLabel?.text = "Send Example".localized
         default:
             cell.textLabel?.text = ""
         }

@@ -58,13 +58,13 @@ class EventDetailViewController: UIViewController {
         eventDescLabel.numberOfLines = 0
         
         let eventPriceLabel = UILabel()
-        eventPriceLabel.text = "Admission is " + String(event.price) + " CZK."
+        eventPriceLabel.text = "Admission".localized + String(event.price) + " CZK."
         
         let eventAttendeeLabel = UILabel()
-        eventAttendeeLabel.text = String(event.attendeeCount) + " attendees"
+        eventAttendeeLabel.text = String(event.attendeeCount) + " " + "attendees".localized
         
         let moreInfoButton = UIButton(type: .roundedRect)
-        moreInfoButton.setTitle("More info", for: .normal)
+        moreInfoButton.setTitle("More info".localized, for: .normal)
         moreInfoButton.addTarget(self, action: #selector(EventDetailViewController.openInfo), for: .touchUpInside)
         
         if (event.url == "") {

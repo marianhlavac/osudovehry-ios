@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>More info</key>
+	<dict>
+		<key>value</key>
+		<string>More info</string>
+	</dict>
+	<key>Intro 03</key>
+	<dict>
+		<key>value</key>
+		<string>In settings you can turn on notifications, so the app will let you know when another Osudove hry event is coming up!</string>
+	</dict>
+	<key>Intro 02</key>
+	<dict>
+		<key>value</key>
+		<string>This app will help you find nearest events for you to attend, displaying useful information about them.</string>
+	</dict>
+	<key>Intro 01</key>
+	<dict>
+		<key>value</key>
+		<string>Osudove hry is a series of events organized by students at FIT CTU faculty, available for everyone who likes beer and a little bit of competition.</string>
+	</dict>
+	<key>Show the map</key>
+	<dict>
+		<key>value</key>
+		<string>Show the map</string>
+	</dict>
+	<key>Map competition</key>
+	<dict>
+		<key>value</key>
+		<string>There is a quiz competition going on at each Osudove hry events. The winners of the quiz claims parts of the Osudoland. Take a look how they are doing.</string>
+	</dict>
+	<key>Team Won 03</key>
+	<dict>
+		<key>value</key>
+		<string>and the third place is hold by the team </string>
+	</dict>
+	<key>Team Won 02</key>
+	<dict>
+		<key>value</key>
+		<string>, the second place belongs to the team</string>
+	</dict>
+	<key>Team Won 01</key>
+	<dict>
+		<key>value</key>
+		<string>event won team</string>
+	</dict>
+	<key>attendees</key>
+	<dict>
+		<key>value</key>
+		<string>attendees</string>
+	</dict>
+	<key>Admission</key>
+	<dict>
+		<key>value</key>
+		<string>Admission is</string>
+	</dict>
+	<key>Delete user data</key>
+	<dict>
+		<key>value</key>
+		<string>Delete user data</string>
+	</dict>
+	<key>Send Example</key>
+	<dict>
+		<key>value</key>
+		<string>Send example notification</string>
+	</dict>
+	<key>Upcoming Ev Notifications</key>
+	<dict>
+		<key>value</key>
+		<string>Allow upcoming event notifications</string>
+	</dict>
+	<key>All</key>
+	<dict>
+		<key>value</key>
+		<string>All</string>
+	</dict>
+	<key>Upcoming</key>
+	<dict>
+		<key>value</key>
+		<string>Upcoming</string>
+	</dict>
+	<key>Upcoming Events</key>
+	<dict>
+		<key>value</key>
+		<string>Upcoming Events</string>
+	</dict>
+	<key>All Events</key>
+	<dict>
+		<key>value</key>
+		<string>All Events</string>
+	</dict>
+	<key>Results</key>
+	<dict>
+		<key>value</key>
+		<string>Results</string>
+	</dict>
+	<key>Settings</key>
+	<dict>
+		<key>value</key>
+		<string>Settings</string>
+	</dict>
+</dict>
+</plist>

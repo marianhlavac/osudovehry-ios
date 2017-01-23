@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>More info</key>
+	<dict>
+		<key>value</key>
+		<string>Více informací</string>
+	</dict>
+	<key>Intro 03</key>
+	<dict>
+		<key>value</key>
+		<string>V nastavení si můžete zapnout notifikace, aby vám aplikace dala vědět s předstihem, kdy se konají další Osudové hry!</string>
+	</dict>
+	<key>Intro 02</key>
+	<dict>
+		<key>value</key>
+		<string>Tato aplikace vám usnadní vyhledání nejbližších Osudových her, kterých se můžete účastnit!</string>
+	</dict>
+	<key>Intro 01</key>
+	<dict>
+		<key>value</key>
+		<string>Osudové hry jsou hry o sud piva - pořádané studenty z fakulty FIT ČVUT pro všechny, kdo mají rádi pivo a soutěž!</string>
+	</dict>
+	<key>Show the map</key>
+	<dict>
+		<key>value</key>
+		<string>Zobrazit mapu</string>
+	</dict>
+	<key>Map competition</key>
+	<dict>
+		<key>value</key>
+		<string>Každé Osudové hry soutěžíme o část mapy Osudolandu. Podívejte se jak si zatím účastníci vedou!</string>
+	</dict>
+	<key>Team Won 03</key>
+	<dict>
+		<key>value</key>
+		<string>a třetí místo obsadil tým</string>
+	</dict>
+	<key>Team Won 02</key>
+	<dict>
+		<key>value</key>
+		<string>, na druhém místě se umístil tým</string>
+	</dict>
+	<key>Team Won 01</key>
+	<dict>
+		<key>value</key>
+		<string>vyhrál tým</string>
+	</dict>
+	<key>attendees</key>
+	<dict>
+		<key>value</key>
+		<string>účastníků</string>
+	</dict>
+	<key>Admission</key>
+	<dict>
+		<key>value</key>
+		<string>Startovné je</string>
+	</dict>
+	<key>Delete user data</key>
+	<dict>
+		<key>value</key>
+		<string>Vymazat uživatelská data</string>
+	</dict>
+	<key>Send Example</key>
+	<dict>
+		<key>value</key>
+		<string>Poslat ukázkové upozornění</string>
+	</dict>
+	<key>Upcoming Ev Notifications</key>
+	<dict>
+		<key>value</key>
+		<string>Povolit upozornění na blízké události</string>
+	</dict>
+	<key>All</key>
+	<dict>
+		<key>value</key>
+		<string>Všechny</string>
+	</dict>
+	<key>Upcoming</key>
+	<dict>
+		<key>value</key>
+		<string>Nadcházející</string>
+	</dict>
+	<key>Upcoming Events</key>
+	<dict>
+		<key>value</key>
+		<string>Nadcházející události</string>
+	</dict>
+	<key>All Events</key>
+	<dict>
+		<key>value</key>
+		<string>Všechny události</string>
+	</dict>
+	<key>Results</key>
+	<dict>
+		<key>value</key>
+		<string>Výsledky</string>
+	</dict>
+	<key>Settings</key>
+	<dict>
+		<key>value</key>
+		<string>Nastavení</string>
+	</dict>
+</dict>
+</plist>

@@ -23,7 +23,7 @@ class ResultsTableViewController: UITableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.update), name: NotificationTypes.dataChange, object: nil)
         
         // Create tabBarItem
-        tabBarItem = UITabBarItem(title: "Results", image: nil, selectedImage: nil)
+        tabBarItem = UITabBarItem(title: "Results".localized, image: nil, selectedImage: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -45,7 +45,7 @@ class ResultsTableViewController: UITableViewController {
         super.viewDidAppear(animated)
         
         // Set navigation title
-        tabBarController?.navigationItem.title = "Results"
+        tabBarController?.navigationItem.title = "Results".localized
         
         // Set this class as data source
         self.tableView.dataSource = self
@@ -72,9 +72,9 @@ class ResultsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
-        cell.textLabel?.text = events[indexPath.row].name + " vyhrál tým " + events[indexPath.row].results[0] +
-                                ", na druhém místě se umístil tým " + events[indexPath.row].results[1] + " a na třetím tým " +
-                                events[indexPath.row].results[2]
+        cell.textLabel?.text = events[indexPath.row].name + " " + "Team Won 01".localized + " " +  events[indexPath.row].results[0]
+                                + "Team Won 02".localized + " " +  events[indexPath.row].results[1]
+                                + " " + "Team Won 03".localized + " " + events[indexPath.row].results[2]
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.numberOfLines = 0
         
